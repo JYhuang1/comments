@@ -4,9 +4,7 @@
 var path = require('path');
 var webpack = require('webpack');
 module.exports = {
-    entry: {
-        index: './js/index.js'
-    },
+    entry: ['./js/index.js'],
     plugins:[
         //去掉空格
         new webpack.optimize.UglifyJsPlugin()
@@ -17,22 +15,27 @@ module.exports = {
         filename: 'bundle.js'
     },
     module:{
-        loader:[{
+        loaders:[{
             test: /images/,
+            exclude: /node_modules/,
             loader: 'file'
         },{
+            test: /\.js$/,
+            exclude: /node_modules/,
+            include: __dirname,
+            loader: 'babel'
+        },{
             test: /icons/,
+            exclude: /node_modules/,
             loader: 'url'
         },{
             test: /\.scss$/,
+            exclude: /node_modules/,
             loader: 'style!css!sass'
         },{
             test: /\.css$/,
+            exclude: /node_modules/,
             loader: 'style-loader!css-loader'
-        },{
-            test: /\.js$/,
-            exclude: /node_nodules/,
-            loader: 'babel'
         }]
     }
 }

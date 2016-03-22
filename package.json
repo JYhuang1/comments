@@ -4,11 +4,18 @@
   "description": "webpack&amp;React test",
   "main": "webpack.config.js",
   "dependencies": {
-    "webpack-dev-server": "^1.14.1"
+    "webpack-dev-server": "^1.14.1",
+    "classnames": "2.1.2",
+    "react": "0.13.3",
+    "react-redux": "2.1.2",
+    "redux": "3.0.0"
   },
   "devDependencies": {
     "babel-core": "5.8.25",
     "babel-loader": "5.3.2",
+    "babel-preset-es2015": "^6.0.15",
+    "babel-preset-react": "^6.0.15",
+    "babel-preset-stage-0": "^6.0.15",
     "css-loader": "0.18.0",
     "file-loader": "0.8.4",
     "node-argv": "0.0.7",
@@ -23,6 +30,14 @@
     "start": "webpack-dev-server --progress --colors --hot --inline -d",
     "build": "webpack --progress --colors -p"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "henry",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JYhuang1/comments.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JYhuang1/comments/issues"
+  },
+  "homepage": "https://github.com/JYhuang1/comments#readme"
 }
