@@ -5,10 +5,15 @@ var path = require('path');
 var webpack = require('webpack');
 module.exports = {
     entry: ['./js/index.js'],
-    plugins:[
+    /*plugins:[
         //去掉空格
         new webpack.optimize.UglifyJsPlugin()
-    ],
+    ],*/
+    resolve: {
+        alias: {
+            jquery: "js/jquery"
+        }
+    },
     output: {
         path: path.join(__dirname,'dist'),
         publicPath: '/dist/',//bundle.js的输出路径
